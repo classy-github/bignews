@@ -70,6 +70,9 @@
               alert(backData.msg);
             }else if(backData.code===200){
               alert(backData.msg)
+              //保存token  
+              //localStorage:实现数据本地化,刷新后还在 setItem:设置本地数据
+              window.localStorage.setItem('token',backData.token);
               // location.href  window的一个方法  window的去向
               window.location.href='./index.html';
             }
